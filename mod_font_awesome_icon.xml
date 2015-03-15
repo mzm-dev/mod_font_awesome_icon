@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>Font Awesome Icon Module</name>
+    <author>Mohamad Zaki Mustafa</author>
+    <creationDate>Mac 2015</creationDate>
+    <copyright>Copyright (C) 2014 Mzm</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>mohdzaki04@gmail.com</authorEmail>
+    <authorUrl>https://github.com/mzm-dev/mod_font_awesome_icon</authorUrl>
+    <version>1.0</version>
+    <description><![CDATA[ 
+		<h1>Font Awesome Icon Module for Joomla! 3.0</h1>
+		<p>Font Awesome Icon Module in a module position.</p>
+                <p><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/examples/">Visit Font Awesome</a></p>
+	]]></description>    
+    <files>
+        <filename module="mod_font_awesome_icon">mod_font_awesome_icon.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_font_awesome_icon.xml</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_font_awesome_icon.ini</language>
+    </languages>    
+    <config>
+        <fields name="params">   
+            <fieldset name="basic">             
+                <field name="notesomecicon" type="note"  label="SOME_ICONS_LABEL" description="SOME_ICONS_DESC" />
+            </fieldset>                
+            <fieldset name="advanced">                
+                <field 
+                    name="moduleclass_sfx"  type="text" default="media_social" 
+                    label="Module Class Suffix" 
+                    description="MOD_CLASS_SFX_DESC">
+                </field>
+                <field 
+                    name="font_awesome_path"  type="text" class="span6" default="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" 
+                    label="Font Awesome path" required="true"
+                    description="Path of CSS font awesome">
+                </field>
+                <field 
+                    name="listclass_sfx"  type="list" default="" class="span3"
+                    label="Place of icon items" 
+                    description="MOD_LIST_SFX_DESC">
+                    <option
+                        value="list-inline">Horizontal</option>
+                    <option
+                        value="">Vertical</option>
+                </field>
+                
+                <field 
+                    name="fa_size"  type="list" default="" class="span3"
+                    label="Setting icon sizes" 
+                    description="MOD_FA_SIZE_DESC">
+                    <option value="fa-lg">fa lg</option>
+                    <option value="fa-2x">fa 2x</option>
+                    <option value="fa-3x">fa 3x</option>
+                    <option value="fa-4x">fa 4x</option>
+                    <option value="fa-5x">fa 5x</option>
+                </field>
+                <field 
+                    name="fa_stacked"  type="list" default="" class="span3"
+                    label="Shapes Icon" 
+                    description="MOD_FA_STAKED_DESC">                    
+                    <option value="circle">Circle</option>
+                    <option value="square">Square</option>
+                    <option value="square-o">Square-o</option>                    
+                </field>
+                <field type="spacer" name="myspacer" hr="true" />
+            </fieldset>
+            <fieldset name="icons">         
+                <field type="spacer" name="icon1" label="&lt;h4&gt;Icon 1&lt;/h4&gt;&lt;hr/&gt;" />                       
+                <field name="icon1_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon1_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon1_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon1_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon2" label="&lt;h4&gt;Icon 2&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon2_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon2_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon2_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon2_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon3" label="&lt;h4&gt;Icon 3&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon3_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon3_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon3_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon3_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon4" label="&lt;h4&gt;Icon 4&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon4_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon4_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon4_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon4_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon5" label="&lt;h4&gt;Icon 5&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon5_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon5_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon5_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon5_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon6" label="&lt;h4&gt;Icon 6&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon6_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon6_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon6_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon6_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon7" label="&lt;h4&gt;Icon 7&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon7_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon7_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon7_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon7_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+                <field type="spacer" name="icon8" label="&lt;h4&gt;Icon 8&lt;/h4&gt;&lt;hr/&gt;" />                
+                <field name="icon8_enable" type="radio"  class="btn-group btn-group-yesno" default="0" 
+                       label="Show/Hide this icons" description="Enable/Disable icons">
+                    <option value="1">Show</option>
+                    <option value="0">Hide</option>
+                </field>
+                <field name="icon8_icon" type="text"  default="joomla" label="Icon Name" description="ICON_TYPE_DESC"></field>
+                <field name="icon8_url" type="text" default="#" label="URL" description="ICON_TYPE_URL"></field>
+                <field name="icon8_color" type="color" default="" label="Color" description="Color of Icon" />
+                
+            </fieldset>
+        </fields>
+    </config>
+</extension>
