@@ -11,7 +11,11 @@ defined('_JEXEC') or die;
 $doc = JFactory::getDocument();
 $doc->addStyleSheet($font_awesome_path);
 ?>
-
+<style>
+    .list-inline > li{
+        padding: 0px;
+    }
+</style>
 <div class="<?php echo $moduleclass_sfx ?>">
     <ul class="<?php echo $listclass_sfx ?> list-unstyled">
 
